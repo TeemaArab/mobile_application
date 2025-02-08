@@ -88,9 +88,30 @@ struct ContentView: View {
                 timeLeft -= 1 // decrease the timer
                 startCountdown() // call for the next second
             }else{
-                handeTimeout()
+                handleTimeout()
             }
         }
+    }
+    
+    // handle timeout
+    func handleTimeout(){
+        wrongAnswers += 1 // to keep record of wrong answer
+        answerMessage = "u{274c} Time's up!"  //record times is up
+        attemptCounter += 1 // increment the attempts
+        
+        if attemptCounter == 10{
+            // shows results after 10 times
+            showMessage = " Results: \nCorrect Answers: \(correctAnswers)\nWrong Answers"
+            
+            // clear the results after 3 seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                showMessage = ""
+            }
+            attemptCounter = 0 // reset attempts
+        }
+        
+    
+        
     }
     
     func checkAnswer(isPrimeSelected : Bool){
