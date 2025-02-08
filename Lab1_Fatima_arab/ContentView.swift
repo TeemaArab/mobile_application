@@ -109,6 +109,8 @@ struct ContentView: View {
             }
             attemptCounter = 0 // reset attempts
         }
+        randomNumber = Int.random(in: 1...100)// create a new set of randow number
+        startCountdown()
         
     
         
@@ -127,9 +129,15 @@ struct ContentView: View {
         if attemptCounter == 10{
             showMessage = " Results: \nCorrect Answers: \(correctAnswers) \nWrong Answers: \(wrongAnswers)" // this shows the message when the count reaches 10
             
+            // clear the results after 3 seconds
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+                showMessage = ""
+            }
+            
             attemptCounter = 0 // reset attempts after reaching 10
         }
         randomNumber = Int.random(in: 1...100) // create a new number
+        startCountdown()
     }
     func isPrime (_ num:Int)-> Bool{
         if num < 2{ return false}
