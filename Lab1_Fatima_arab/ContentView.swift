@@ -11,6 +11,12 @@ struct ContentView: View {
     
     @State private var randomNumber = Int.random(in: 1...100) // we generate randm number
     @State private var answerMessage = " " // this is where we keep feedback for message
+    
+    // add variables to track correct and wrong answers and attempts
+    @State private var correctAnswers = 0 // THis is to track correct answers
+    @State private var wrongAnswers = 0 // track wrong answers
+    @State private var attemptCounter = 0 // track attempts
+    
     var body: some View {
         VStack {
             Text("Is this number prime?")
