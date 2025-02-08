@@ -55,6 +55,16 @@ struct ContentView: View {
                 .font(.headline)
                 .foregroundColor(.green)
                 .padding()
+            
+            // show the result message after 10 attempts
+            if !showMessage.isEmpty{
+                Text(showMessage)
+                    .font(.body)
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+            }
         }
         
     }
