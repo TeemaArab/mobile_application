@@ -57,9 +57,12 @@ struct ContentView: View {
     func checkAnswer(isPrimeSelected : Bool){
         if isPrime(randomNumber) == isPrimeSelected{
             answerMessage = "\u{2705} correct!"
+            correctAnswers += 1 // increment the correct answer
         }else{
             answerMessage = "\u{274C} wrong!"
+            wrongAnswers += 1 // increment wrong answer
         }
+        attemptCounter += 1 // increament the number of attempt
         randomNumber = Int.random(in: 1...100) // create a new number
     }
     func isPrime (_ num:Int)-> Bool{
