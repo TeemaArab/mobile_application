@@ -17,6 +17,9 @@ struct ContentView: View {
     @State private var wrongAnswers = 0 // track wrong answers
     @State private var attemptCounter = 0 // track attempts
     
+    // create an alert to show the number of attempts after 10 times
+    @State private var showMessage = false
+    
     var body: some View {
         VStack {
             Text("Is this number prime?")
@@ -63,6 +66,10 @@ struct ContentView: View {
             wrongAnswers += 1 // increment wrong answer
         }
         attemptCounter += 1 // increament the number of attempt
+        
+        if attemptCounter == 10{
+            showMessage = true // this shows the message when the count reaches 10
+        }
         randomNumber = Int.random(in: 1...100) // create a new number
     }
     func isPrime (_ num:Int)-> Bool{
