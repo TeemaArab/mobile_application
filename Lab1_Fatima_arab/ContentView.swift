@@ -21,11 +21,56 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding()
+            
+            HStack{
+                Button("Prime"){
+                    checkAnswer(isPrimeSelected:true)
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                
+                Button("Not Prime"){
+                    checkAnswer(isPrimeSelected: false)
+                }
+                .padding()
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            
+            }
+            .padding()
+            Text (answerMessage) // here we show feedback message
+                .font(.headline)
+                .foregroundColor(.green)
+                .padding()
         }
-        .padding()
+    }
+    
+    func checkAnswer(isPrimeSelected : Bool){
+        if isPrime(randomNumber) == isPrimeSelected{
+            answerMessage = "\u{2705} correct!"
+        }else{
+            answerMessage = "\u{274C} wrong!"
+        }
+        randomNumber = Int.random(in: 1...100) // create a new number
+    }
+    func isPrime (_ num:Int)-> Bool{
+        if num < 2{ return false}
+        for i in 2..<num{
+            if num % i == 0 {
+                return false
+            }
+        }
+        return true
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider{
+    static var previews: some View{
+        ContentView()
+    }
 }
+
+
