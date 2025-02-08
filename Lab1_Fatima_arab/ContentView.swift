@@ -20,6 +20,9 @@ struct ContentView: View {
     // create a message to show the number of attempts after 10 times
     @State private var showMessage =  " "
     
+    @State private var tileLeft = 5 // timer starts at 5 seconds
+    @State private var timerRunnig = true // this controls the timer state
+    
     var body: some View {
         VStack {
             Text("Is this number prime?")
