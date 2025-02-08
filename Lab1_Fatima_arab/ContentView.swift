@@ -17,8 +17,8 @@ struct ContentView: View {
     @State private var wrongAnswers = 0 // track wrong answers
     @State private var attemptCounter = 0 // track attempts
     
-    // create an alert to show the number of attempts after 10 times
-    @State private var showMessage = false
+    // create a message to show the number of attempts after 10 times
+    @State private var showMessage =  " "
     
     var body: some View {
         VStack {
@@ -50,11 +50,13 @@ struct ContentView: View {
             
             }
             .padding()
+            
             Text (answerMessage) // here we show feedback message
                 .font(.headline)
                 .foregroundColor(.green)
                 .padding()
         }
+        
     }
     
     func checkAnswer(isPrimeSelected : Bool){
@@ -68,7 +70,9 @@ struct ContentView: View {
         attemptCounter += 1 // increament the number of attempt
         
         if attemptCounter == 10{
-            showMessage = true // this shows the message when the count reaches 10
+            showMessage = " Results: \nCorrect Answers: \(correctAnswers) \nWrong Answers: \(wrongAnswers)" // this shows the message when the count reaches 10
+            
+            attemptCounter = 0 // reset attempts after reaching 10
         }
         randomNumber = Int.random(in: 1...100) // create a new number
     }
