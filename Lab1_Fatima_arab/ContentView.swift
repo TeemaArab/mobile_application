@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var randomNumber = Int.random(in: 1...100) // we generate randm number
+    @State private var answerMessage = " " // this is where we keep feedback for message
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Is this number prime?")
+                .font(.title)
+                .padding()
+            
+            Text("\(randomNumber)") // this is to display random number
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding()
         }
         .padding()
     }
