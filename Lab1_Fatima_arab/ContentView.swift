@@ -21,7 +21,7 @@ struct ContentView: View {
     @State private var showMessage =  " "
     
     @State private var timeLeft = 5 // timer starts at 5 seconds
-    @State private var timerRunnig = true // this controls the timer state
+    @State private var timerRunning = true // this controls the timer state
     
     var body: some View {
         VStack {
@@ -37,7 +37,7 @@ struct ContentView: View {
             // to show timer
             Text("Time Left: \(timeLeft) seconds")
                 .font(.headline)
-                .foregroundColor(.accentColor)
+                .foregroundColor(.red)
                 .padding()
             
             HStack{
@@ -76,7 +76,7 @@ struct ContentView: View {
             }
         }
         onAppear{
-            startCountdown()
+            startTimer()
         }
         
     }
@@ -84,7 +84,7 @@ struct ContentView: View {
         timeLeft = 5 // we reset the timer to 5 seconds
         
         //Create timer
-        Timer.schedulesTimer(withTimeInterval: 1.0, repeats: true){
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){
             timer in
             if timeLeft> 0 {
                 timeLeft -= 1 // decrease time
@@ -99,7 +99,7 @@ struct ContentView: View {
     // handle timeout
     func handleTimeout(){
         wrongAnswers += 1 // to keep record of wrong answer
-        answerMessage = "u{274c} Time's up!"  //record times is up
+        answerMessage = "\u{274C} Time's up!"  //record times is up
         attemptCounter += 1 // increment the attempts
         
         if attemptCounter == 10{
