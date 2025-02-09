@@ -80,17 +80,20 @@ struct ContentView: View {
         }
         
     }
-    func startCountdown(){
+    func startTimer(){
         timeLeft = 5 // we reset the timer to 5 seconds
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-            if timeLeft > 0 {
-                timeLeft -= 1 // decrease the timer
-                startCountdown() // call for the next second
+        //Create timer
+        Timer.schedulesTimer(withTimeInterval: 1.0, repeats: true){
+            timer in
+            if timeLeft> 0 {
+                timeLeft -= 1 // decrease time
             }else{
+                timer.invalidate() // stop the timer
                 handleTimeout()
             }
         }
+    
     }
     
     // handle timeout
