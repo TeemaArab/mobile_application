@@ -86,7 +86,7 @@ struct ContentView: View {
         //Create timer
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){
             timer in
-            if timeLeft> 0 {
+            if timeLeft > 0 {
                 timeLeft -= 1 // decrease time
             }else{
                 timer.invalidate() // stop the timer
@@ -113,7 +113,7 @@ struct ContentView: View {
             attemptCounter = 0 // reset attempts
         }
         randomNumber = Int.random(in: 1...100)// create a new set of randow number
-        startCountdown()
+         startTimer()
         
     
         
@@ -140,7 +140,7 @@ struct ContentView: View {
             attemptCounter = 0 // reset attempts after reaching 10
         }
         randomNumber = Int.random(in: 1...100) // create a new number
-        startCountdown()
+         startTimer()
     }
     func isPrime (_ num:Int)-> Bool{
         if num < 2{ return false}
