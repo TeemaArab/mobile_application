@@ -84,7 +84,7 @@ struct ContentView: View {
         timeLeft = 5 // we reset the timer to 5 seconds
         
         //Create timer
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){
+        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true){
             timer in
             if self.timeLeft > 0 {
                 self.timeLeft -= 1 // decrease time
