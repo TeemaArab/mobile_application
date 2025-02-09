@@ -75,8 +75,8 @@ struct ContentView: View {
                 
             }
         }
-        onAppear{
-            startTimer()
+        .onAppear{
+          startTimer()
         }
         
     }
