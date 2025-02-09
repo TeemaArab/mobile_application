@@ -86,11 +86,11 @@ struct ContentView: View {
         //Create timer
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){
             timer in
-            if timeLeft > 0 {
-                timeLeft -= 1 // decrease time
+            if self.timeLeft > 0 {
+                self.timeLeft -= 1 // decrease time
             }else{
                 timer.invalidate() // stop the timer
-                handleTimeout()
+                self.handleTimeout()
             }
         }
     
