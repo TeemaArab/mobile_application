@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var randomNumber = Int.random(in: 1...100) // we generate randm number
-    @State private var answerMessage = " " // this is where we keep feedback for message
+    @State private var answerMessage  = " " // this is where we keep feedback for message
     
     // add variables to track correct and wrong answers and attempts
     @State private var correctAnswers = 0 // THis is to track correct answers
@@ -25,13 +25,15 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Is this number prime?")
-                .font(.title)
-                .padding()
+            
+            Spacer()
+            
+            // Display random number
             
             Text("\(randomNumber)") // this is to display random number
-                .font(.largeTitle)
-                .fontWeight(.bold)
+                .font(.custom("Cochin",size:100))
+                .italic()
+                .foregroundColor(.teal)
                 .padding()
             
             // to show timer
@@ -40,25 +42,32 @@ struct ContentView: View {
                 .foregroundColor(.red)
                 .padding()
             
-            HStack{
-                Button("Prime"){
-                    checkAnswer(isPrimeSelected:true)
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-                
-                Button("Not Prime"){
-                    checkAnswer(isPrimeSelected: false)
-                }
-                .padding()
-                .background(Color.red)
-                .foregroundColor(.white)
-                .cornerRadius(10)
+            Spacer()
             
+            // buttons fro prime and not prime
+            
+            VStack(spacing:20){
+                Button (action:{
+                    checkAnswer(isPrimeSelected: true)
+                }){
+                    Text("Prime")
+                        .font(.custom("Cochin", size: 40))
+                        .italic()
+                        .foregroundColor(.teal)
+                    
+                }
+                
+                Button(action:{
+                    checkAnswer(isPrimeSelected: false)
+                }){
+                    Text("not Prime")
+                        .font(.custom("Cochin", size : 40))
+                        .italic()
+                        .foregroundColor(.teal)
+                }
             }
-            .padding()
+            
+            Spacer()
             
             Text (answerMessage) // here we show feedback message
                 .font(.headline)
@@ -75,11 +84,13 @@ struct ContentView: View {
                 
             }
         }
+        
         .onAppear{
-          startTimer()
+            startTimer()
         }
         
     }
+    
     func startTimer(){
         timeLeft = 5 // we reset the timer to 5 seconds
         
@@ -93,14 +104,14 @@ struct ContentView: View {
                 self.handleTimeout()
             }
         }
-    
+        
     }
     
     // handle timeout
     func handleTimeout(){
-        wrongAnswers += 1 // to keep record of wrong answer
-        answerMessage = "\u{274C} Time's up!"  //record times is up
+        wrongAnswers += 1 // to keep record of wrong answer if the user does not choose the answer in 5 seconds
         attemptCounter += 1 // increment the attempts
+        answerMessage = "\u{274C} Time's up!"  //record times is up
         
         if attemptCounter == 10{
             // shows results after 10 times
@@ -111,13 +122,15 @@ struct ContentView: View {
                 showMessage = ""
             }
             attemptCounter = 0 // reset attempts
+            correctAnswers = 0
+            wrongAnswers = 0
         }
         randomNumber = Int.random(in: 1...100)// create a new set of randow number
-         startTimer()
-        
-    
+        startTimer()
         
     }
+    
+    
     
     func checkAnswer(isPrimeSelected : Bool){
         if isPrime(randomNumber) == isPrimeSelected{
@@ -138,9 +151,11 @@ struct ContentView: View {
             }
             
             attemptCounter = 0 // reset attempts after reaching 10
+            correctAnswers = 0
+            wrongAnswers = 0
         }
         randomNumber = Int.random(in: 1...100) // create a new number
-         startTimer()
+        startTimer()
     }
     func isPrime (_ num:Int)-> Bool{
         if num < 2{ return false}
