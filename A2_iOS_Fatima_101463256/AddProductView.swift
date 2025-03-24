@@ -40,8 +40,23 @@ struct AddProductView: View {
             .navigationTitle("Add New Product")
         }
     }
+    
+    func addNewProduct(){
+        let newProduct = Product(context: viewContext)
+        newProduct.productID = productID
+        newProduct.name = name
+        newProduct.productDescription = productDescription
+        newProduct.price = Double(price) ?? 0.0
+        newProduct.provider = provider
+        
+        
+        do {
+            try viewContext.save()
+            dismiss()
+            
+        }catch {
+            print ("Error saving product: \(error)")
+        }
+    }
 }
 
-#Preview {
-    AddProductView()
-}
