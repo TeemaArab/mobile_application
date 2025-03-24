@@ -17,6 +17,7 @@
 		17CC864E2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC864D2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift */; };
 		17CC86502D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC864F2D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift */; };
 		17CC865F2D91D51C001F532A /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC865E2D91D51C001F532A /* AddProductView.swift */; };
+		17CC86612D920E6F001F532A /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC86602D920E6F001F532A /* ProductListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		17CC864D2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Fatima_101463256UITests.swift; sourceTree = "<group>"; };
 		17CC864F2D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Fatima_101463256UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		17CC865E2D91D51C001F532A /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		17CC86602D920E6F001F532A /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				17CC86382D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld */,
 				17CC86332D9197A6001F532A /* Preview Content */,
 				17CC865E2D91D51C001F532A /* AddProductView.swift */,
+				17CC86602D920E6F001F532A /* ProductListView.swift */,
 			);
 			path = A2_iOS_Fatima_101463256;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CC86612D920E6F001F532A /* ProductListView.swift in Sources */,
 				17CC86372D9197A6001F532A /* Persistence.swift in Sources */,
 				17CC863A2D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld in Sources */,
 				17CC86302D9197A5001F532A /* ContentView.swift in Sources */,

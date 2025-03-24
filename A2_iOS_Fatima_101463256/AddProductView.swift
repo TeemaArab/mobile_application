@@ -34,20 +34,21 @@ struct AddProductView: View {
                     TextField("Provider", text: $provider)
                 }
                 
-                
-                Button("Save Product"){
-                    addNewProduct()
-                }
-                .disabled(name.isEmpty || price.isEmpty)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-            }
     
-            .navigationTitle("Add New Product")
-        }
+                    Button("Save Product"){
+                        addNewProduct()
+                    }
+                    .disabled(name.isEmpty || price.isEmpty)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                }
+                
+                .navigationTitle("Add New Product")
+            }
+        
     }
     
     func addNewProduct(){
