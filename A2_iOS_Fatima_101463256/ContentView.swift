@@ -92,7 +92,7 @@ struct ContentView: View {
                 NavigationLink(destination: AddProductView()){
                     Text(" Add New Product")
                         .padding()
-                        .background(Color.blue)
+                        .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }

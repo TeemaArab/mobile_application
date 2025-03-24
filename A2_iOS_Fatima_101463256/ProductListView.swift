@@ -18,22 +18,32 @@ struct ProductListView: View {
     
     var body: some View {
         NavigationView{
-            List{
-                ForEach(allProducts, id: \.self){
-                    product in
-                    VStack(alignment: .leading, spacing: 6){
-                        Text("Name: \(product.name ?? "N/A")")
-                            .font(.headline)
-                        Text("Description: \(product.productDescription ?? "N/A")")
-                            .font(.subheadline)
-                        Text(String(format: " Price: $%.2f", product.price))
-                        Text("Provider: \(product.provider ?? "N/A")")
+            ScrollView{
+                LazyVStack(alignment: .leading, spacing: 12){
+                    ForEach(allProducts, id: \.self){
+                        product in
+                        VStack(alignment: .leading, spacing: 6){
+                            Text("Name: \(product.name ?? "N/A")")
+                                .font(.headline)
+                            Text("Description: \(product.productDescription ?? "N/A")")
+                                .font(.subheadline)
+                            Text(String(format: " Price: $%.2f", product.price))
+                            Text("Provider: \(product.provider ?? "N/A")")
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color(.systemGray6))
+                        .cornerRadius(12)
+                        .padding(.horizontal)
+                        
                     }
-                    .padding(6)
                 }
+                .padding(.top)
+               
             }
-            .navigationTitle("All Products")
+                .navigationTitle("All Products")
+                .navigationBarTitleDisplayMode(.inline)
+            }
         }
-    }
 }
 
