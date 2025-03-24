@@ -15,5 +15,24 @@ struct ProductListView: View {
                   sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending:true)]
     ) private var allProducts: FetchedResults<Product>
     
-  
+    
+    var body: some View {
+        NavigationView{
+            List{
+                ForEach(allProducts){
+                    product in
+                    VStack(alignment: .leading, spacing: 8){
+                        Text(product.name ?? "No Name")
+                            .font(.headline)
+                        Text(product.productDescription ?? "No Description")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    .padding(.vertical, 8)
+                }
+            }
+            .navigationTitle("All Products")
+        }
+    }
+}
 
