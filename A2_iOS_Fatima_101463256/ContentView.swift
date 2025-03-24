@@ -30,11 +30,31 @@ struct ContentView: View {
                 }else{
                     let product = products[currentIndex]
                     
-                    Text("Product Name: \(product.name?? "N/A")")
+                    Text("Product Name: \(product.name ?? "N/A")")
                         .font(.subheadline)
+                    Text("Description: \(product.productDescription ?? "N/A")")
+                        .font(.subheadline)
+                    Text("Price: $\(product.price, specifier: "%.2f")")
+                    Text("Provider: \(product.provider ?? "N/A")")
+                    
+                    HStack{
+                        Button ("Previous"){
+                            if currentIndex > 0{
+                                currentIndex -= 1
+                            }
+                        }
+                        .disabled(currentIndex == 0)
+                        
+                        Button("Next"){
+                            if currentIndex < products.count - 1{
+                                currentIndex += 1
+                            }
+                        }
+                        .disabled(currentIndex >= products.count - 1)
+                    }
+                    .padding()
+                    .navigationTitle("Product Viewer")
                 }
-                               
-    
-#Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-}
+                
+            }
+        }
