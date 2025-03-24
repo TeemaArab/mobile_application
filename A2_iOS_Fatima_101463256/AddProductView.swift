@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddProductView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -32,11 +33,19 @@ struct AddProductView: View {
                         .keyboardType(.decimalPad)
                     TextField("Provider", text: $provider)
                 }
-                Button ("Save Product"){
+                
+                
+                Button("Save Product"){
                     addNewProduct()
                 }
                 .disabled(name.isEmpty || price.isEmpty)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(8)
             }
+    
             .navigationTitle("Add New Product")
         }
     }

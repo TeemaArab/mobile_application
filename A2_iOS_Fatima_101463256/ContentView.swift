@@ -19,29 +19,29 @@ struct ContentView: View {
     
     @State private var currentIndex = 0
     @State private var searchText = ""
-    
+
     // Filtered product list
     var filteredProducts: [Product]{
         if searchText.isEmpty {
             return Array(allProducts)
         }else{
             return allProducts.filter{product in (product.name?.localizedCaseInsensitiveContains(searchText) ?? false) ||
-                                        (product.productDescription?.localizedCaseInsensitiveContains(searchText) ?? false)
+                (product.productDescription?.localizedCaseInsensitiveContains(searchText) ?? false)
+            }
         }
     }
-}
-                                    
     
     var body: some View {
         NavigationView {
             VStack(spacing: 20){
                 
-                
-                
                 // Search bar
                 TextField("Search by name or description", text: $searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
+                
+                
+                // filtered list
                 if filteredProducts.isEmpty{
                     Text("No matching products.")
                         .foregroundColor(.gray)
@@ -56,6 +56,8 @@ struct ContentView: View {
                     Text("Price: $\(product.price, specifier: "%.2f")")
                     Text("Provider: \(product.provider ?? "N/A")")
                     
+                    
+                    // previous /next buttons
                     HStack(spacing:20){
                         Button(action: {
                             if currentIndex > 0{
@@ -84,25 +86,23 @@ struct ContentView: View {
                         
                         .disabled(currentIndex >= filteredProducts.count - 1)
                     }
+                }
+                
+                // Add New Product button
+                NavigationLink(destination: AddProductView()){
+                    Text(" Add New Product")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+            }
                     
-                    // Add product Button
-                    NavigationLink(destination: AddProductView()){
-                        Text(" Add New Product")
-                            .padding()
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
+                    .padding()
+                    .navigationTitle("Product Viewer")
+                    .onChange(of: searchText){_ in
+                        currentIndex = 0
                     }
                 }
             }
-                    .padding()
-                    .navigationTitle("Product Viewer")
-                    .onChange(of:searchText){ _ in
-                currentIndex = 0
-                }
-                
-            }
-        }
-}
-    
-    
+    }
