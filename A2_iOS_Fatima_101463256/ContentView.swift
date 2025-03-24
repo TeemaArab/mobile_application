@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
         entity: Product.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending:true)]
@@ -18,9 +18,9 @@ struct ContentView: View {
     )private var products: FetchedResults<Product>
     
     @State private var currentIndex = 0
-        
     
-
+    
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20){
@@ -58,3 +58,6 @@ struct ContentView: View {
                 
             }
         }
+    }
+}
+    
