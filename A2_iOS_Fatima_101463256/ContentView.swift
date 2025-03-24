@@ -15,20 +15,37 @@ struct ContentView: View {
         entity: Product.entity(),
         sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending:true)]
         
-    )private var products: FetchedResults<Product>
+    )private var allProducts: FetchedResults<Product>
     
     @State private var currentIndex = 0
+    @State private var searchText = ""
     
-    
+    // Filtered product list
+    var filteredProducts: [Product]{
+        if searchText.isEmpty {
+            return Array(allProducts)
+        }else{
+            return allProducts.filter{product in (product.name?.localizedCaseInsensitiveContains(searchText) ?? false) ||
+                                        (product.productDescription?.localizedCaseInsensitiveContains(searchText) ?? false)
+        }
+    }
+}
+                                    
     
     var body: some View {
         NavigationView {
             VStack(spacing: 20){
-                if products.isEmpty{
-                    Text ("No products available.")
+                
+                // Search bar
+                TextField("Search by name or description", text: $searchText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
+                if filteredProducts.isEmpty{
+                    Text("No matching products.")
                         .foregroundColor(.gray)
                 }else{
-                    let product = products[currentIndex]
+                    let product = filteredProducts[currentIndex]
+
                     
                     Text("Product Name: \(product.name ?? "N/A")")
                         .font(.subheadline)
@@ -52,7 +69,7 @@ struct ContentView: View {
                         .disabled(currentIndex == 0)
                         
                         Button(action: {
-                            if currentIndex < products.count - 1{
+                            if currentIndex < filteredProducts.count - 1{
                                 currentIndex += 1
                             }
                         }){
@@ -63,15 +80,18 @@ struct ContentView: View {
                                 .cornerRadius(8)
                         }
                         
-                        .disabled(currentIndex >= products.count - 1)
+                        .disabled(currentIndex >= filteredProducts.count - 1)
                     }
                 }
             }
                     .padding()
                     .navigationTitle("Product Viewer")
+            onChange(of:searchText){ _ in
+                currentIndex = 0
                 }
                 
             }
         }
+}
     
     
