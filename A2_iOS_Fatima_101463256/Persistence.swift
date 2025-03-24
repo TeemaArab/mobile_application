@@ -55,6 +55,29 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
-        container.viewContext.automaticallyMergesChangesFromParent = true
+        //container.viewContext.automaticallyMergesChangesFromParent = true
+        insertSampleProductsIfNeeded(context: container.viewContext)
+    }
+    private func insertSampleProductsIfNeeded(context: NSManagedObjectContext){
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        
+        do {
+            let count = try context.count(for: fetchRequest)
+            if count == 0{
+                for i in 1...10{
+                    let product = Product(context:context)
+                    product.productID = UUID().uuidString
+                    product.name = "Product \(i)"
+                    product.productDescription = " This is description for Product \(i)"
+                    product.price = Double(i) * 10.0
+                    product.provider = "Provider \(i)"
+                    
+                }
+                try context.save()
+            }
+        } catch {
+            print(" Error inserting sample products: \(error.localizedDescription)")
+        }
+        
     }
 }
