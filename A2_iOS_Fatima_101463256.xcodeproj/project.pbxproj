@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17CC862E2D9197A5001F532A /* A2_iOS_Fatima_101463256App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC862D2D9197A5001F532A /* A2_iOS_Fatima_101463256App.swift */; };
+		17CC86302D9197A5001F532A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC862F2D9197A5001F532A /* ContentView.swift */; };
+		17CC86322D9197A6001F532A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17CC86312D9197A6001F532A /* Assets.xcassets */; };
+		17CC86352D9197A6001F532A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17CC86342D9197A6001F532A /* Preview Assets.xcassets */; };
+		17CC86372D9197A6001F532A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC86362D9197A6001F532A /* Persistence.swift */; };
+		17CC863A2D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17CC86382D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld */; };
+		17CC86442D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC86432D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.swift */; };
+		17CC864E2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC864D2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift */; };
+		17CC86502D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CC864F2D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17CC86402D9197A6001F532A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17CC86222D9197A5001F532A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17CC86292D9197A5001F532A;
+			remoteInfo = A2_iOS_Fatima_101463256;
+		};
+		17CC864A2D9197A6001F532A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17CC86222D9197A5001F532A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17CC86292D9197A5001F532A;
+			remoteInfo = A2_iOS_Fatima_101463256;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17CC862A2D9197A5001F532A /* A2_iOS_Fatima_101463256.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A2_iOS_Fatima_101463256.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17CC862D2D9197A5001F532A /* A2_iOS_Fatima_101463256App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Fatima_101463256App.swift; sourceTree = "<group>"; };
+		17CC862F2D9197A5001F532A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		17CC86312D9197A6001F532A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17CC86342D9197A6001F532A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17CC86362D9197A6001F532A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		17CC86392D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A2_iOS_Fatima_101463256.xcdatamodel; sourceTree = "<group>"; };
+		17CC863F2D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = A2_iOS_Fatima_101463256Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17CC86432D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Fatima_101463256Tests.swift; sourceTree = "<group>"; };
+		17CC86492D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = A2_iOS_Fatima_101463256UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17CC864D2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Fatima_101463256UITests.swift; sourceTree = "<group>"; };
+		17CC864F2D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A2_iOS_Fatima_101463256UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17CC86272D9197A5001F532A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17CC863C2D9197A6001F532A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17CC86462D9197A6001F532A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17CC86212D9197A5001F532A = {
+			isa = PBXGroup;
+			children = (
+				17CC862C2D9197A5001F532A /* A2_iOS_Fatima_101463256 */,
+				17CC86422D9197A6001F532A /* A2_iOS_Fatima_101463256Tests */,
+				17CC864C2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests */,
+				17CC862B2D9197A5001F532A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17CC862B2D9197A5001F532A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17CC862A2D9197A5001F532A /* A2_iOS_Fatima_101463256.app */,
+				17CC863F2D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.xctest */,
+				17CC86492D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17CC862C2D9197A5001F532A /* A2_iOS_Fatima_101463256 */ = {
+			isa = PBXGroup;
+			children = (
+				17CC862D2D9197A5001F532A /* A2_iOS_Fatima_101463256App.swift */,
+				17CC862F2D9197A5001F532A /* ContentView.swift */,
+				17CC86312D9197A6001F532A /* Assets.xcassets */,
+				17CC86362D9197A6001F532A /* Persistence.swift */,
+				17CC86382D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld */,
+				17CC86332D9197A6001F532A /* Preview Content */,
+			);
+			path = A2_iOS_Fatima_101463256;
+			sourceTree = "<group>";
+		};
+		17CC86332D9197A6001F532A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				17CC86342D9197A6001F532A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17CC86422D9197A6001F532A /* A2_iOS_Fatima_101463256Tests */ = {
+			isa = PBXGroup;
+			children = (
+				17CC86432D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.swift */,
+			);
+			path = A2_iOS_Fatima_101463256Tests;
+			sourceTree = "<group>";
+		};
+		17CC864C2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests */ = {
+			isa = PBXGroup;
+			children = (
+				17CC864D2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift */,
+				17CC864F2D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift */,
+			);
+			path = A2_iOS_Fatima_101463256UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17CC86292D9197A5001F532A /* A2_iOS_Fatima_101463256 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17CC86532D9197A6001F532A /* Build configuration list for PBXNativeTarget "A2_iOS_Fatima_101463256" */;
+			buildPhases = (
+				17CC86262D9197A5001F532A /* Sources */,
+				17CC86272D9197A5001F532A /* Frameworks */,
+				17CC86282D9197A5001F532A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = A2_iOS_Fatima_101463256;
+			productName = A2_iOS_Fatima_101463256;
+			productReference = 17CC862A2D9197A5001F532A /* A2_iOS_Fatima_101463256.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17CC863E2D9197A6001F532A /* A2_iOS_Fatima_101463256Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17CC86562D9197A6001F532A /* Build configuration list for PBXNativeTarget "A2_iOS_Fatima_101463256Tests" */;
+			buildPhases = (
+				17CC863B2D9197A6001F532A /* Sources */,
+				17CC863C2D9197A6001F532A /* Frameworks */,
+				17CC863D2D9197A6001F532A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17CC86412D9197A6001F532A /* PBXTargetDependency */,
+			);
+			name = A2_iOS_Fatima_101463256Tests;
+			productName = A2_iOS_Fatima_101463256Tests;
+			productReference = 17CC863F2D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17CC86482D9197A6001F532A /* A2_iOS_Fatima_101463256UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17CC86592D9197A6001F532A /* Build configuration list for PBXNativeTarget "A2_iOS_Fatima_101463256UITests" */;
+			buildPhases = (
+				17CC86452D9197A6001F532A /* Sources */,
+				17CC86462D9197A6001F532A /* Frameworks */,
+				17CC86472D9197A6001F532A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17CC864B2D9197A6001F532A /* PBXTargetDependency */,
+			);
+			name = A2_iOS_Fatima_101463256UITests;
+			productName = A2_iOS_Fatima_101463256UITests;
+			productReference = 17CC86492D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17CC86222D9197A5001F532A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					17CC86292D9197A5001F532A = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					17CC863E2D9197A6001F532A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 17CC86292D9197A5001F532A;
+					};
+					17CC86482D9197A6001F532A = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 17CC86292D9197A5001F532A;
+					};
+				};
+			};
+			buildConfigurationList = 17CC86252D9197A5001F532A /* Build configuration list for PBXProject "A2_iOS_Fatima_101463256" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17CC86212D9197A5001F532A;
+			productRefGroup = 17CC862B2D9197A5001F532A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17CC86292D9197A5001F532A /* A2_iOS_Fatima_101463256 */,
+				17CC863E2D9197A6001F532A /* A2_iOS_Fatima_101463256Tests */,
+				17CC86482D9197A6001F532A /* A2_iOS_Fatima_101463256UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17CC86282D9197A5001F532A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CC86352D9197A6001F532A /* Preview Assets.xcassets in Resources */,
+				17CC86322D9197A6001F532A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17CC863D2D9197A6001F532A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17CC86472D9197A6001F532A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17CC86262D9197A5001F532A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CC86372D9197A6001F532A /* Persistence.swift in Sources */,
+				17CC863A2D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld in Sources */,
+				17CC86302D9197A5001F532A /* ContentView.swift in Sources */,
+				17CC862E2D9197A5001F532A /* A2_iOS_Fatima_101463256App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17CC863B2D9197A6001F532A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CC86442D9197A6001F532A /* A2_iOS_Fatima_101463256Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17CC86452D9197A6001F532A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CC86502D9197A6001F532A /* A2_iOS_Fatima_101463256UITestsLaunchTests.swift in Sources */,
+				17CC864E2D9197A6001F532A /* A2_iOS_Fatima_101463256UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17CC86412D9197A6001F532A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17CC86292D9197A5001F532A /* A2_iOS_Fatima_101463256 */;
+			targetProxy = 17CC86402D9197A6001F532A /* PBXContainerItemProxy */;
+		};
+		17CC864B2D9197A6001F532A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17CC86292D9197A5001F532A /* A2_iOS_Fatima_101463256 */;
+			targetProxy = 17CC864A2D9197A6001F532A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17CC86512D9197A6001F532A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17CC86522D9197A6001F532A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17CC86542D9197A6001F532A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"A2_iOS_Fatima_101463256/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gbc.FatimaArab.comp3097.A2-iOS-Fatima-101463256";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17CC86552D9197A6001F532A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"A2_iOS_Fatima_101463256/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gbc.FatimaArab.comp3097.A2-iOS-Fatima-101463256";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17CC86572D9197A6001F532A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gbc.FatimaArab.comp3097.A2-iOS-Fatima-101463256Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/A2_iOS_Fatima_101463256.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/A2_iOS_Fatima_101463256";
+			};
+			name = Debug;
+		};
+		17CC86582D9197A6001F532A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gbc.FatimaArab.comp3097.A2-iOS-Fatima-101463256Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/A2_iOS_Fatima_101463256.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/A2_iOS_Fatima_101463256";
+			};
+			name = Release;
+		};
+		17CC865A2D9197A6001F532A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gbc.FatimaArab.comp3097.A2-iOS-Fatima-101463256UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = A2_iOS_Fatima_101463256;
+			};
+			name = Debug;
+		};
+		17CC865B2D9197A6001F532A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gbc.FatimaArab.comp3097.A2-iOS-Fatima-101463256UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = A2_iOS_Fatima_101463256;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17CC86252D9197A5001F532A /* Build configuration list for PBXProject "A2_iOS_Fatima_101463256" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17CC86512D9197A6001F532A /* Debug */,
+				17CC86522D9197A6001F532A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17CC86532D9197A6001F532A /* Build configuration list for PBXNativeTarget "A2_iOS_Fatima_101463256" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17CC86542D9197A6001F532A /* Debug */,
+				17CC86552D9197A6001F532A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17CC86562D9197A6001F532A /* Build configuration list for PBXNativeTarget "A2_iOS_Fatima_101463256Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17CC86572D9197A6001F532A /* Debug */,
+				17CC86582D9197A6001F532A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17CC86592D9197A6001F532A /* Build configuration list for PBXNativeTarget "A2_iOS_Fatima_101463256UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17CC865A2D9197A6001F532A /* Debug */,
+				17CC865B2D9197A6001F532A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17CC86382D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17CC86392D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodel */,
+			);
+			currentVersion = 17CC86392D9197A6001F532A /* A2_iOS_Fatima_101463256.xcdatamodel */;
+			path = A2_iOS_Fatima_101463256.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 17CC86222D9197A5001F532A /* Project object */;
+}
