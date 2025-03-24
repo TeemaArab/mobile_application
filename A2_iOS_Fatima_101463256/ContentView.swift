@@ -36,6 +36,8 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 20){
                 
+                
+                
                 // Search bar
                 TextField("Search by name or description", text: $searchText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -45,7 +47,7 @@ struct ContentView: View {
                         .foregroundColor(.gray)
                 }else{
                     let product = filteredProducts[currentIndex]
-
+                    
                     
                     Text("Product Name: \(product.name ?? "N/A")")
                         .font(.subheadline)
@@ -82,11 +84,20 @@ struct ContentView: View {
                         
                         .disabled(currentIndex >= filteredProducts.count - 1)
                     }
+                    
+                    // Add product Button
+                    NavigationLink(destination: AddProductView()){
+                        Text(" Add New Product")
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }
                 }
             }
                     .padding()
                     .navigationTitle("Product Viewer")
-            onChange(of:searchText){ _ in
+                    .onChange(of:searchText){ _ in
                 currentIndex = 0
                 }
                 
