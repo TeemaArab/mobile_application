@@ -19,16 +19,17 @@ struct ProductListView: View {
     var body: some View {
         NavigationView{
             List{
-                ForEach(allProducts){
+                ForEach(allProducts, id: \.self){
                     product in
-                    VStack(alignment: .leading, spacing: 8){
-                        Text(product.name ?? "No Name")
+                    VStack(alignment: .leading, spacing: 6){
+                        Text("Name: \(product.name ?? "N/A")")
                             .font(.headline)
-                        Text(product.productDescription ?? "No Description")
+                        Text("Description: \(product.productDescription ?? "N/A")")
                             .font(.subheadline)
-                            .foregroundColor(.gray)
+                        Text(String(format: " Price: $%.2f", product.price))
+                        Text("Provider: \(product.provider ?? "N/A")")
                     }
-                    .padding(.vertical, 8)
+                    .padding(6)
                 }
             }
             .navigationTitle("All Products")
