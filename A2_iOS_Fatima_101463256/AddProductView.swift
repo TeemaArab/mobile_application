@@ -13,12 +13,32 @@ struct AddProductView: View {
     
     @State private var productID = UUID().uuidString
     @State private var name = ""
-    @State private var productDescriptin = ""
+    @State private var productDescription = ""
+    @State private var price = ""
+    @State private var provider = ""
+    
     
     
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            Form {
+                Section (header: Text ("Product information")){
+                    TextField( "Product ID", text : $productID)
+                        .disabled(true)
+                    TextField("Name", text: $name)
+                    TextField("Description", text: $productDescription)
+                    TextField("Price", text: $price)
+                        .keyboardType(.decimalPad)
+                    TextField("Provider", text: $provider)
+                }
+                Button ("Save Product"){
+                    addNewProduct()
+                }
+                .disabled(name.isEmpty || price.isEmpty)
+            }
+            .navigationTitle("Add New Product")
+        }
     }
 }
 
