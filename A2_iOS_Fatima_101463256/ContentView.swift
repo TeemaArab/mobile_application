@@ -97,7 +97,15 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
             }
-                    
+           
+            // view All products button
+            NavigationLink(destination: ProductListView()){
+                Text("View All Products")
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
                     .padding()
                     .navigationTitle("Product Viewer")
                     .onChange(of: searchText){_ in
