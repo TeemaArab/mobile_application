@@ -37,27 +37,41 @@ struct ContentView: View {
                     Text("Price: $\(product.price, specifier: "%.2f")")
                     Text("Provider: \(product.provider ?? "N/A")")
                     
-                    HStack{
-                        Button ("Previous"){
+                    HStack(spacing:20){
+                        Button(action: {
                             if currentIndex > 0{
                                 currentIndex -= 1
                             }
+                        }){
+                            Text("Previous")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
                         }
                         .disabled(currentIndex == 0)
                         
-                        Button("Next"){
+                        Button(action: {
                             if currentIndex < products.count - 1{
                                 currentIndex += 1
                             }
+                        }){
+                            Text("Next")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
                         }
+                        
                         .disabled(currentIndex >= products.count - 1)
                     }
+                }
+            }
                     .padding()
                     .navigationTitle("Product Viewer")
                 }
                 
             }
         }
-    }
-}
+    
     
