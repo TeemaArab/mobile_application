@@ -58,27 +58,27 @@ struct ContentView: View {
                     
                     
                     // previous /next buttons
-                    HStack(spacing:20){
-                        Button(action: {
+                    HStack(spacing:16){
+                        Button(action:{
                             if currentIndex > 0{
                                 currentIndex -= 1
                             }
                         }){
                             Text("Previous")
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(8)
+                            .frame(width: 120,height:44)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
                         }
                         .disabled(currentIndex == 0)
                         
-                        Button(action: {
+                                   Button(action: {
                             if currentIndex < filteredProducts.count - 1{
                                 currentIndex += 1
                             }
-                        }){
-                            Text("Next")
-                                .padding()
+                            }){
+                                Text("Next")
+                                .frame(width: 120, height:44)
                                 .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
