@@ -8,6 +8,13 @@
 import SwiftUI
 import CoreData
 
+let dateFormatter : DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .medium
+    formatter.timeStyle = .short
+    return formatter
+}()
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -57,8 +64,11 @@ struct ContentView: View {
                         .font(.subheadline)
                         Text("Price: $\(product.price, specifier: "%.2f")")
                         Text("Provider: \(product.provider ?? "N/A")")
-                
-                   
+                    if let created = product.createdAt{
+                        Text("Created At: \(dateFormatter.string(from: created))")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                    }
                     
                     
                     // previous /next buttons
