@@ -12,7 +12,7 @@ struct ProductListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(entity: Product.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending:true)]
+                  sortDescriptors: []
     ) private var allProducts: FetchedResults<Product>
     
     
@@ -31,7 +31,7 @@ struct ProductListView: View {
                     Text("Provider: \(product.provider ?? "N/A")")
                 }
                 .padding()
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(maxWidth:.infinity, alignment: .leading)
                 .background(Color(.systemGray6))
                 .cornerRadius(12)
                 .padding(.horizontal)

@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @FetchRequest(
         entity: Product.entity(),
-        sortDescriptors: [NSSortDescriptor(keyPath: \Product.name, ascending:true)]
+        sortDescriptors: [NSSortDescriptor(keyPath: \Product.createdAt, ascending:true)]
         
     )private var allProducts: FetchedResults<Product>
     
@@ -25,8 +25,9 @@ struct ContentView: View {
         if searchText.isEmpty {
             return Array(allProducts)
         }else{
-            return allProducts.filter{product in (product.name?.localizedCaseInsensitiveContains(searchText) ?? false) ||
-                (product.productDescription?.localizedCaseInsensitiveContains(searchText) ?? false)
+            return allProducts.filter{product in 
+               ( product.name?.localizedCaseInsensitiveContains(searchText) ?? false) ||
+               ( product.productDescription?.localizedCaseInsensitiveContains(searchText) ?? false)
             }
         }
     }
@@ -49,12 +50,15 @@ struct ContentView: View {
                     let product = filteredProducts[currentIndex]
                     
                     
-                    Text("Product Name: \(product.name ?? "N/A")")
+                        
+                        Text("Product Name: \(product.name ?? "N/A")")
                         .font(.subheadline)
-                    Text("Description: \(product.productDescription ?? "N/A")")
+                        Text("Description: \(product.productDescription ?? "N/A")")
                         .font(.subheadline)
-                    Text("Price: $\(product.price, specifier: "%.2f")")
-                    Text("Provider: \(product.provider ?? "N/A")")
+                        Text("Price: $\(product.price, specifier: "%.2f")")
+                        Text("Provider: \(product.provider ?? "N/A")")
+                
+                   
                     
                     
                     // previous /next buttons
@@ -65,19 +69,19 @@ struct ContentView: View {
                             }
                         }){
                             Text("Previous")
-                            .frame(width: 120,height:44)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
+                                .frame(width: 120,height:44)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
                         }
                         .disabled(currentIndex == 0)
                         
-                                   Button(action: {
+                        Button(action: {
                             if currentIndex < filteredProducts.count - 1{
                                 currentIndex += 1
                             }
-                            }){
-                                Text("Next")
+                        }){
+                            Text("Next")
                                 .frame(width: 120, height:44)
                                 .background(Color.blue)
                                 .foregroundColor(.white)
@@ -91,16 +95,19 @@ struct ContentView: View {
                 // Add New Product button
                 NavigationLink(destination: AddProductView()){
                     Text(" Add New Product")
-                        .padding()
+                    //.padding()
+                        .frame(width:256, height:44)
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
-                
+            
+            
                  // view All products button
                  NavigationLink(destination: ProductListView()){
                      Text("View All Products")
                          .padding()
+                         .frame(width: 256, height:44)
                          .background(Color.green)
                          .foregroundColor(.white)
                          .cornerRadius(8)
@@ -114,4 +121,4 @@ struct ContentView: View {
                     }
                 }
             }
-    }
+}

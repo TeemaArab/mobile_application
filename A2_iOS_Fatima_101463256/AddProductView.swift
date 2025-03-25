@@ -58,6 +58,7 @@ struct AddProductView: View {
         newProduct.productDescription = productDescription
         newProduct.price = Double(price) ?? 0.0
         newProduct.provider = provider
+        newProduct.createdAt = Date()
         
         
         do {
