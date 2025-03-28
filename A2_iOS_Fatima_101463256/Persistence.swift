@@ -65,11 +65,11 @@ struct PersistenceController {
         do {
             let count = try context.count(for: fetchRequest)
             if count == 0{
-                for i in 1...30{
+                for i in 1...10{
                     let product = Product(context:context)
                     product.productID = UUID().uuidString
                     product.name = "Product \(i)"
-                    product.productDescription = " This is description for Product \(i)"
+                    product.productDescription = " This is for Product  \(i)"
                     product.price = Double(i) * 10.0
                     product.provider = "Provider \(i)"
                     product.createdAt = Date()

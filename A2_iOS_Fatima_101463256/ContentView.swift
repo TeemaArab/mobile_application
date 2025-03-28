@@ -26,6 +26,9 @@ struct ContentView: View {
     
     @State private var currentIndex = 0
     @State private var searchText = ""
+    
+    
+
 
     // Filtered product list
     var filteredProducts: [Product]{
@@ -71,6 +74,7 @@ struct ContentView: View {
                     }
                     
                     
+                    
                     // previous /next buttons
                     HStack(spacing:16){
                         Button(action:{
@@ -101,6 +105,7 @@ struct ContentView: View {
                         .disabled(currentIndex >= filteredProducts.count - 1)
                     }
                 }
+                    
                 
                 // Add New Product button
                 NavigationLink(destination: AddProductView()){
@@ -132,3 +137,4 @@ struct ContentView: View {
                 }
             }
 }
+
