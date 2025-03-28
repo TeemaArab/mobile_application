@@ -20,6 +20,7 @@ struct PersistenceController {
             product.productDescription = " This is description for Product \(i)."
             product.price = Double(i) * 10.0
             product.provider = "Provider \(i)"
+            product.createdAt = Date()
         }
         do {
             try viewContext.save()
@@ -71,6 +72,7 @@ struct PersistenceController {
                     product.productDescription = " This is description for Product \(i)"
                     product.price = Double(i) * 10.0
                     product.provider = "Provider \(i)"
+                    product.createdAt = Date()
                     
                 }
                 try context.save()
